@@ -34,19 +34,21 @@ export default function Contact() {
       <h2>Contact Me</h2>
 
       <form ref={form} onSubmit={sendEmail}>
-        <input
-          type="text"
-          name="user_name"
-          placeholder="Your Name"
-          required
-        />
+        <div className="form-row">
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+          />
 
-        <input
-          type="email"
-          name="user_email"
-          placeholder="Your Email"
-          required
-        />
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
 
         <textarea
           name="message"

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   FaMobileAlt,
   FaLaptopCode,
@@ -49,7 +50,14 @@ export default function Services() {
       <div className="services-grid">
 
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <motion.div
+            className="service-card"
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: (index % 3) * 0.12 }}
+          >
 
             <div className="icon">{service.icon}</div>
 
@@ -57,7 +65,7 @@ export default function Services() {
 
             <p>{service.desc}</p>
 
-          </div>
+          </motion.div>
         ))}
 
       </div>

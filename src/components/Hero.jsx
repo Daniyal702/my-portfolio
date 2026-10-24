@@ -1,5 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
-import { FaDownload, FaArrowRight } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
+import { FiGithub, FiLinkedin, FiMail, FiChevronDown } from "react-icons/fi";
 import profile from "../assets/profile.png";
 
 export default function Hero() {
@@ -7,6 +8,8 @@ export default function Hero() {
     <section className="hero" id="hero">
 
       <div className="hero-left">
+
+        <p className="hello">👋 Welcome to my portfolio</p>
 
         <h1>
           Hi, I'm <br />
@@ -50,6 +53,13 @@ export default function Hero() {
 
         </div>
 
+        {/* TODO: replace # with your real profile links */}
+        <div className="hero-socials">
+          <a href="#" aria-label="GitHub" title="GitHub"><FiGithub /></a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn"><FiLinkedin /></a>
+          <a href="#" aria-label="Email" title="Email"><FiMail /></a>
+        </div>
+
       </div>
 
       <div className="hero-right">
@@ -61,6 +71,10 @@ export default function Hero() {
         </div>
 
       </div>
+
+      <a href="#about" className="scroll-down" aria-label="Scroll down">
+        <FiChevronDown />
+      </a>
 
     </section>
   );
